@@ -36,8 +36,6 @@ namespace ProjetoMosquitoVelho
 
             try
             {
-
-
                 num1 = Convert.ToDouble(txtValor1.Text);
                 num2 = Convert.ToDouble(txtValor2.Text);
 
