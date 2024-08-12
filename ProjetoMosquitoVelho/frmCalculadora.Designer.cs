@@ -176,6 +176,7 @@ namespace ProjetoMosquitoVelho
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnLimpar
             // 
