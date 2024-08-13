@@ -132,6 +132,7 @@ namespace ProjetoMosquitoVelho
             this.btnProdutos.Text = "&Produtos";
             this.btnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProdutos.UseVisualStyleBackColor = true;
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
             // btnUsuarios
             // 
