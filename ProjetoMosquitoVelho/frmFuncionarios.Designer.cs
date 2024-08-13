@@ -137,6 +137,7 @@ namespace ProjetoMosquitoVelho
             this.Name = "frmFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema ABC - Funcionários";
+            this.Load += new System.EventHandler(this.frmFuncionarios_Load);
             this.pnlCrud.ResumeLayout(false);
             this.ResumeLayout(false);
 
