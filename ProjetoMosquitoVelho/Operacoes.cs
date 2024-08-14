@@ -11,7 +11,7 @@ namespace ProjetoMosquitoVelho
         //método construtor
         public Operacoes()
         {
-
+            
         }
 
         public double somar(double v1, double v2)

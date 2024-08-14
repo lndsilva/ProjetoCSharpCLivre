@@ -46,7 +46,7 @@ namespace ProjetoMosquitoVelho
             //ltbProdutos.Items.Clear();
             ltbProdutos.Items.Add(txtProduto.Text);
             txtProduto.Clear();
-            txtProduto.Focus();           
+            txtProduto.Focus();
         }
 
         private void txtProduto_KeyDown(object sender, KeyEventArgs e)
@@ -57,7 +57,7 @@ namespace ProjetoMosquitoVelho
                 txtProduto.Clear();
                 txtProduto.Focus();
             }
-            
+
         }
 
         private void ltbProdutos_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,12 +66,14 @@ namespace ProjetoMosquitoVelho
             //lblEscolhido.Text = ltbProdutos.SelectedIndex.ToString();
 
             //pegando o valor selecionado
-            lblEscolhido.Text = ltbProdutos.SelectedItem.ToString();
+            if (ltbProdutos.SelectedItem != null)
+            {
+                lblEscolhido.Text = ltbProdutos.SelectedItem.ToString();
+            }
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            //ltbProdutos.Items.Remove(ltbProdutos.SelectedIndex);
             ltbProdutos.Items.RemoveAt(ltbProdutos.SelectedIndex);
         }
     }
