@@ -37,12 +37,13 @@ namespace ProjetoMosquitoVelho
             this.lblProdutos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbListarItens = new System.Windows.Forms.ComboBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCarregar
             // 
             this.btnCarregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarregar.Location = new System.Drawing.Point(470, 322);
+            this.btnCarregar.Location = new System.Drawing.Point(459, 322);
             this.btnCarregar.Name = "btnCarregar";
             this.btnCarregar.Size = new System.Drawing.Size(182, 60);
             this.btnCarregar.TabIndex = 0;
@@ -109,11 +110,23 @@ namespace ProjetoMosquitoVelho
             this.cbbListarItens.TabIndex = 5;
             this.cbbListarItens.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbbListarItens_MouseClick);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(30, 322);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(182, 60);
+            this.btnVoltar.TabIndex = 7;
+            this.btnVoltar.Text = "&Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmListarProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 394);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbListarItens);
             this.Controls.Add(this.lblProdutos);
@@ -142,5 +155,6 @@ namespace ProjetoMosquitoVelho
         private System.Windows.Forms.Label lblProdutos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbbListarItens;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

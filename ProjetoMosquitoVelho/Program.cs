@@ -16,7 +16,7 @@ namespace ProjetoMosquitoVelho
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListarProdutos());
+            Application.Run(new frmSplash());
         }
     }
 }
