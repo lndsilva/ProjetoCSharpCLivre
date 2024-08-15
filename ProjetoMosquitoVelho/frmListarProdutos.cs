@@ -116,5 +116,17 @@ namespace ProjetoMosquitoVelho
             abrir.Show();
             this.Hide();
         }
+
+        private void btnTestarPessoa_Click(object sender, EventArgs e)
+        {
+            //instanciando o objeto pessoa
+            Pessoa p = new Pessoa();
+            p.Nome = "Senac";
+            lblTestarPessoa.Text = p.Nome;
+
+
+            
+
+        }
     }
 }

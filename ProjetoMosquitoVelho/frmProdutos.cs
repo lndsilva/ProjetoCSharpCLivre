@@ -76,5 +76,10 @@ namespace ProjetoMosquitoVelho
         {
             ltbProdutos.Items.RemoveAt(ltbProdutos.SelectedIndex);
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

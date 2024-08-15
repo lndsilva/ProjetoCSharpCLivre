@@ -8,5 +8,22 @@ namespace ProjetoMosquitoVelho
 {
     class Pessoa
     {
+        //criando atributos ou variáveis globais privadas
+        private string nome;
+        private string email;
+        private int idade;
+
+        //criando métodos get e set
+
+        public string Nome { get => nome; set => nome = value; }
+        public string Email { get => email; set => email = value; }
+        public int Idade { get => idade; set => idade = value; }
+
+        
+
+
+
+
+
     }
 }
