@@ -47,6 +47,8 @@ namespace ProjetoMosquitoVelho
             this.lblMostrarNumeroCartao = new System.Windows.Forms.Label();
             this.lblMostrarDocumeto = new System.Windows.Forms.Label();
             this.mtbNumeroCartao = new System.Windows.Forms.MaskedTextBox();
+            this.btnTestaLogin = new System.Windows.Forms.Button();
+            this.txtTestaLogin = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCarregar
@@ -220,11 +222,33 @@ namespace ProjetoMosquitoVelho
             this.mtbNumeroCartao.Size = new System.Drawing.Size(166, 26);
             this.mtbNumeroCartao.TabIndex = 18;
             // 
+            // btnTestaLogin
+            // 
+            this.btnTestaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTestaLogin.Location = new System.Drawing.Point(258, 216);
+            this.btnTestaLogin.Name = "btnTestaLogin";
+            this.btnTestaLogin.Size = new System.Drawing.Size(182, 60);
+            this.btnTestaLogin.TabIndex = 19;
+            this.btnTestaLogin.Text = "&Testar login";
+            this.btnTestaLogin.UseVisualStyleBackColor = true;
+            this.btnTestaLogin.Click += new System.EventHandler(this.btnTestaLogin_Click);
+            // 
+            // txtTestaLogin
+            // 
+            this.txtTestaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTestaLogin.Location = new System.Drawing.Point(258, 175);
+            this.txtTestaLogin.MaxLength = 30;
+            this.txtTestaLogin.Name = "txtTestaLogin";
+            this.txtTestaLogin.Size = new System.Drawing.Size(182, 26);
+            this.txtTestaLogin.TabIndex = 20;
+            // 
             // frmListarProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 457);
+            this.Controls.Add(this.txtTestaLogin);
+            this.Controls.Add(this.btnTestaLogin);
             this.Controls.Add(this.mtbNumeroCartao);
             this.Controls.Add(this.lblMostrarNumeroCartao);
             this.Controls.Add(this.lblMostrarDocumeto);
@@ -273,5 +297,7 @@ namespace ProjetoMosquitoVelho
         private System.Windows.Forms.Label lblMostrarNumeroCartao;
         private System.Windows.Forms.Label lblMostrarDocumeto;
         private System.Windows.Forms.MaskedTextBox mtbNumeroCartao;
+        private System.Windows.Forms.Button btnTestaLogin;
+        private System.Windows.Forms.TextBox txtTestaLogin;
     }
 }

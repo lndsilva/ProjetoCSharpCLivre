@@ -27,6 +27,11 @@ namespace ProjetoMosquitoVelho
             InitializeComponent();
 
         }
+        public frmLogin(string nome)
+        {
+            InitializeComponent();
+            txtUsuario.Text = nome;
+        }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -40,7 +45,7 @@ namespace ProjetoMosquitoVelho
         {
             if (txtUsuario.Text.Equals("senac") && txtSenha.Text.Equals("senac"))
             {
-                frmMenuPrincipal abrir = new frmMenuPrincipal();
+                frmMenuPrincipal abrir = new frmMenuPrincipal(txtUsuario.Text);
                 abrir.Show();
                 this.Hide();
             }
@@ -59,7 +64,7 @@ namespace ProjetoMosquitoVelho
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 txtSenha.Focus();
             }

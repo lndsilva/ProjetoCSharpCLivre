@@ -28,6 +28,13 @@ namespace ProjetoMosquitoVelho
             InitializeComponent();
         }
 
+        public frmMenuPrincipal(string nome)
+        {
+            InitializeComponent();
+            lblPegarUsuario.Text = nome;
+
+        }
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             frmLogin abrir = new frmLogin();
@@ -51,7 +58,7 @@ namespace ProjetoMosquitoVelho
 
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-            frmProdutos abrir = new frmProdutos();
+            frmProdutos abrir = new frmProdutos(lblPegarUsuario.Text);
             abrir.Show();
             this.Hide();
         }

@@ -39,6 +39,7 @@ namespace ProjetoMosquitoVelho
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.lblPegarUsuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnfuncionarios
@@ -162,11 +163,22 @@ namespace ProjetoMosquitoVelho
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // lblPegarUsuario
+            // 
+            this.lblPegarUsuario.AutoSize = true;
+            this.lblPegarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPegarUsuario.Location = new System.Drawing.Point(42, 416);
+            this.lblPegarUsuario.Name = "lblPegarUsuario";
+            this.lblPegarUsuario.Size = new System.Drawing.Size(107, 20);
+            this.lblPegarUsuario.TabIndex = 11;
+            this.lblPegarUsuario.Text = "Pegar usuário";
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPegarUsuario);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnOrcamentos);
             this.Controls.Add(this.btnFornecedores);
@@ -184,6 +196,7 @@ namespace ProjetoMosquitoVelho
             this.Text = "Sistema ABC - Menu Principal";
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -197,5 +210,6 @@ namespace ProjetoMosquitoVelho
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label lblPegarUsuario;
     }
 }

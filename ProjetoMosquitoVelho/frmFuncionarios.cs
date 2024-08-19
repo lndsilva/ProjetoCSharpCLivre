@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace ProjetoMosquitoVelho
 {
@@ -40,5 +41,41 @@ namespace ProjetoMosquitoVelho
             abrir.Show();
             this.Hide();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection();
+            conn.Open();
+
+            conn.Close();
+        }
+
+        //busca cep
+        public void buscaCEP(string cep, string usuario, string senha)
+        {
+            WSCorreios.AtendeClienteClient ws = new WSCorreios.AtendeClienteClient();
+            try
+            {
+                WSCorreios.enderecoERP endereco = ws.consultaCEP(cep, usuario, senha);
+
+                txtRua.Text = endereco.end;
+                txtBairro.Text = endereco.bairro;
+                txtCidade.Text = endereco.cidade;
+                cbbEstado.Text = endereco.uf;
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Favor inserir CEP válido");
+               
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            buscaCEP(mskCEP.Text, "senac", "senac");
+        }
+
     }
 }

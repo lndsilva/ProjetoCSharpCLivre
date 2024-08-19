@@ -46,6 +46,8 @@ namespace ProjetoMosquitoVelho
             this.btnRemover = new System.Windows.Forms.Button();
             this.lblProdutoSelecionado = new System.Windows.Forms.Label();
             this.lblEscolhido = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.pnlCrud.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -218,11 +220,32 @@ namespace ProjetoMosquitoVelho
             this.lblEscolhido.TabIndex = 10;
             this.lblEscolhido.Text = "escolhido";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(59, 284);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Olá usuário: ";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(152, 284);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 20);
+            this.lblUsuario.TabIndex = 12;
+            // 
             // frmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEscolhido);
             this.Controls.Add(this.lblProdutoSelecionado);
             this.Controls.Add(this.btnRemover);
@@ -263,5 +286,7 @@ namespace ProjetoMosquitoVelho
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Label lblProdutoSelecionado;
         private System.Windows.Forms.Label lblEscolhido;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

@@ -38,6 +38,18 @@ namespace ProjetoMosquitoVelho
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRua = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbbEstado = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.mskCEP = new System.Windows.Forms.TextBox();
             this.pnlCrud.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +96,7 @@ namespace ProjetoMosquitoVelho
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "&Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnAlterar
             // 
@@ -114,6 +127,7 @@ namespace ProjetoMosquitoVelho
             this.btnPesquisar.TabIndex = 1;
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnVoltar
             // 
@@ -126,11 +140,132 @@ namespace ProjetoMosquitoVelho
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Rua";
+            // 
+            // txtRua
+            // 
+            this.txtRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRua.Location = new System.Drawing.Point(74, 56);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.Size = new System.Drawing.Size(304, 26);
+            this.txtRua.TabIndex = 4;
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(74, 182);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(304, 26);
+            this.txtBairro.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(17, 182);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Bairro";
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(74, 237);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(304, 26);
+            this.txtCidade.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 237);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Cidade";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(8, 299);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Estado";
+            // 
+            // cbbEstado
+            // 
+            this.cbbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEstado.FormattingEnabled = true;
+            this.cbbEstado.Location = new System.Drawing.Point(74, 291);
+            this.cbbEstado.Name = "cbbEstado";
+            this.cbbEstado.Size = new System.Drawing.Size(106, 28);
+            this.cbbEstado.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(201, 299);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "CEP";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(74, 124);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(78, 26);
+            this.txtNumero.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Número";
+            // 
+            // mskCEP
+            // 
+            this.mskCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCEP.Location = new System.Drawing.Point(248, 299);
+            this.mskCEP.Name = "mskCEP";
+            this.mskCEP.Size = new System.Drawing.Size(78, 26);
+            this.mskCEP.TabIndex = 14;
+            // 
             // frmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mskCEP);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbbEstado);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtBairro);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtRua);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlCrud);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -141,6 +276,7 @@ namespace ProjetoMosquitoVelho
             this.Load += new System.EventHandler(this.frmFuncionarios_Load);
             this.pnlCrud.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -154,5 +290,17 @@ namespace ProjetoMosquitoVelho
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtRua;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbbEstado;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox mskCEP;
     }
 }
